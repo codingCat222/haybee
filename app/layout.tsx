@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: site.title, description: site.description },
   robots: { index: true, follow: true },
+  // Paste the Google Search Console code into NEXT_PUBLIC_GOOGLE_VERIFICATION on Vercel.
+  verification: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
